@@ -84,15 +84,16 @@ export default {
     },
     methods:{
         register(){
-            const form = new FormData()
-            form.append('firstname', this.firstname)
-            form.append('lastname', this.lastname)
-            form.append('email', this.email)
-            form.append('password', this.password)
-            form.append('password_confirm', this.password_confirm)
+            const form = new FormData();
+            form.append('firstname', this.firstname);
+            form.append('lastname', this.lastname);
+            form.append('email', this.email);
+            form.append('password', this.password);
+            form.append('password_confirm', this.password_confirm);
 
-            this.$guest.post('/register', form)
-            .then( () => {
+            this.$guest
+            .post('/register', form)
+            .then(() => {
                 this.msg = 'You have benn successfully registered!';
                 this.classAlert = 'success';
             })

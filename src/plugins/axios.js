@@ -10,6 +10,7 @@ const guest = axios.create({
 });
 
 const app = createApp({});
+
 app.config.globalProperties.$guest = guest;
 
 export {guest};
