@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
-import { router } from './router';
+import { router } from './router'
+import { guest } from './plugins/axios'
 import App from './App.vue'
 
 import './assets/styles/main.scss'
@@ -9,4 +10,4 @@ import './assets/styles/main.scss'
 // app.use(router);
 // app.mount('#app');
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(router, guest).mount('#app')
